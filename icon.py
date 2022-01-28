@@ -2,7 +2,7 @@ import  winreg
 
 path = winreg.HKEY_LOCAL_MACHINE
 
-def save_reg(k = '29', v ='%windir%\System32\shell32.dll,-50'):
+def rege(k = '29', v ='%windir%\System32\shell32.dll,-50'):
     try:
         key = winreg.OpenKeyEx(path, r"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\")
         newKey = winreg.CreateKey(key,"Shell Icons")
@@ -17,4 +17,4 @@ def save_reg(k = '29', v ='%windir%\System32\shell32.dll,-50'):
     return False
 
 
-save_reg()
+rege()
